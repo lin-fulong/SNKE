@@ -1,0 +1,37 @@
+# Python bytecode and tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Generated datasets, model statistics, and caches
+data/
+share/
+models/
+checkpoints/
+*.npz
+*.pt
+*.pth
+
+# Experiment outputs and logs
+results/
+logs/
+wandb/
+*.log
+
+# Local environment files
+.env
+.env.*
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

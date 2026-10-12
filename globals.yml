@@ -1,0 +1,20 @@
+---
+  # Result files
+  RESULTS_DIR: "results"
+
+  # Data files
+  DATA_DIR: "data"
+  STATS_DIR: "data/stats"
+  KV_DIR: "share/projects/rewriting-knowledge/kvs"
+  WIKIPEDIA_DATA_DIR: null
+  
+
+  # Optional local model root. If set, model identifiers like gpt2-xl
+  # will preferentially resolve under this directory before any online download.
+  MODEL_DIR: null
+
+  # Hyperparameters
+  HPARAMS_DIR: "hparams"
+
+  # Remote URLs
+  REMOTE_ROOT_URL: "https://memit.baulab.info"
