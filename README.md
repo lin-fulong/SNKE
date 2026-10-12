@@ -29,14 +29,18 @@ The implementation is in [`SNKE/`](SNKE/). [`KGMET/`](KGMET/) and the other edit
 
 ## Environment
 
-The paper's experiments use an NVIDIA A800 GPU. The code calls CUDA directly, so an NVIDIA GPU and a compatible CUDA software stack are required for the editing runs. The current project environment is Linux with CUDA 11.8, PyTorch `2.1.2+cu118`, and `tqdm` `4.64.1`. The DGL wheel specified in [`requirements.txt`](requirements.txt) also targets CUDA 11.8. Install the dependencies from that file; it is the sole source of package versions.
+The paper's experiments use an NVIDIA A800 GPU. The code calls CUDA directly, so an NVIDIA GPU and a compatible CUDA software stack are required for the editing runs.
 
-From the repository root:
+The released experiments were conducted in a Conda environment with Linux, CUDA 11.8, PyTorch `2.1.2+cu118`, and `tqdm` `4.64.1`. The DGL wheel specified in `requirements.txt` also targets CUDA 11.8.
+
+Install the dependencies from the provided `requirements.txt` after creating the Conda environment.
+
+Create and activate the Conda environment:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
+conda create -n snke python=3.10 -y
+conda activate snke
+pip install -r requirements.txt
 ```
 
 On Windows, use the activation command for your shell. Run the commands below from the repository root because [`globals.yml`](globals.yml) and several evaluation assets use relative paths. A model can be specified by a Hugging Face identifier or an accessible local directory. Set `MODEL_DIR` in `globals.yml` if you want model identifiers to resolve under a local model root. Access to gated models, including LLaMA 3, must be arranged separately.
